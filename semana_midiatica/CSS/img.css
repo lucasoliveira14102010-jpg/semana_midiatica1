@@ -1,0 +1,102 @@
+
+/*Hero*/
+.hero { 
+    align-items: center; 
+    display: grid; 
+    gap: 70px; 
+    grid-template-columns: 0.9fr 1.1fr; 
+    min-height: 610px; 
+    padding-bottom: 78px; 
+    padding-top: 78px; 
+    position: relative; 
+}
+
+.hero::before { 
+    border-left: 1px solid rgba(18, 97, 160, 0.18); 
+    content: ''; 
+    height: 130px; 
+    left: 0; 
+    position: absolute; 
+    top: 0; 
+}
+
+.hero-content h1 { 
+    font-size: clamp(3rem, 6vw, 5.6rem); 
+    letter-spacing: -0.05em; 
+    line-height: 0.98; 
+    margin-bottom: 26px; 
+    max-width: 620px; 
+}
+
+.hero-text { 
+    color: var(--muted); 
+    font-size: 1.12rem; 
+    line-height: 1.7;
+    max-width: 470px; 
+}
+
+.hero-media { 
+    position: relative; 
+}
+
+.hero-media::before { 
+    color: white; 
+    content: 'CLOUD SYSTEM / 01'; 
+    font-family: 'Space Grotesk', sans-serif; 
+    font-size: 0.68rem; 
+    font-weight: 700; 
+    left: 18px; 
+    letter-spacing: 0.12em; 
+    position: absolute; 
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45); 
+    top: 16px; z-index: 1; 
+}
+
+.hero-media::after { 
+    border-right: 1px solid var(--accent); 
+    border-top: 1px solid var(--accent); 
+    content: ''; 
+    height: 42px; 
+    position: absolute; 
+    right: -10px; 
+    top: -10px; 
+    width: 42px; 
+}
+
+.hero-media:hover .card-img { 
+    filter: saturate(1.1); 
+    transform: translate(-4px, -4px); 
+}
+
+.hero-note { 
+    background: white; 
+    border-left: 4px solid var(--accent); 
+    bottom: -22px; 
+    box-shadow: 0 12px 28px rgba(18, 36, 59, 0.12); 
+    display: flex; 
+    flex-direction: column; 
+    gap: 5px; 
+    padding: 17px 22px; 
+    position: absolute; 
+    right: 22px; 
+}
+
+.hero-note strong { 
+    font-family: 'Space Grotesk', sans-serif; 
+}
+
+.hero-note span { 
+    color: var(--muted); 
+    font-size: 0.8rem; 
+}
+
+/*conteiner da imagem*/
+.card-img { 
+    border-radius: 3px; 
+    box-shadow: 22px 22px 0 var(--sky); 
+    display: block; 
+    height: 390px; 
+    object-fit: cover; 
+    transition: filter 300ms ease, transform 300ms ease; width: 100%; 
+}
+

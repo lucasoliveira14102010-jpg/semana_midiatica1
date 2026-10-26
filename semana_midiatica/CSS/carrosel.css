@@ -1,0 +1,46 @@
+
+/*Carrossel*/
+.carousel { 
+    border: 10px solid white; 
+    box-shadow: 0 18px 35px rgba(9, 42, 74, 0.13); 
+    overflow: hidden; 
+    position: relative; 
+}
+
+.carousel::before { 
+    color: white; 
+    content: 'SHARED INFRASTRUCTURE'; 
+    font-family: 'Space Grotesk', sans-serif; 
+    font-size: 0.64rem; 
+    font-weight: 700; 
+    left: 17px; 
+    letter-spacing: 0.12em; 
+    position: absolute; 
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6); 
+    top: 14px; 
+    z-index: 2; 
+}
+
+.carousel-item img {
+    height: 385px; 
+    object-fit: cover; 
+    transition: transform 600ms ease; 
+}
+
+.carousel:hover .carousel-item.active img { 
+    transform: scale(1.03); 
+}
+
+.carousel-indicators li { 
+    background-color: var(--accent); 
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon { 
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,.6)); 
+}
+
+/*meida do carrosel*/
+@media (max-width: 760px) {
+    .carousel-item img { height: 270px; }
+}
+ 
